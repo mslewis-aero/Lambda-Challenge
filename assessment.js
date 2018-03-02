@@ -96,7 +96,7 @@ function computeUserAverageAge(users) {
   }
 
   answer = sum / users.length;
-  return answer;
+  return Math.round(answer);
 }
 
 module.exports = {
