@@ -7,7 +7,7 @@ After writing your function uncomment the matching function reference at the bot
 // 1. Write a function called helloWorld that returns the string 'Hello World!'.
 
 function helloWorld() {
-
+  return "Hello World!"
 }
 
 /*
@@ -23,8 +23,18 @@ function helloWorld() {
              lambdaSchool(8); // returns 8
 */
 
-function lambdaSchool() {
+function lambdaSchool(num) {
+  var answer = num;
 
+  if (num%15=0){
+    answer = "Lambda School";
+  } else if (num%5=0){
+    answer = "School";
+  } else if (num%3=0){
+    answer = "Lambda";
+  }
+
+  return answer;
 }
 
 /*
@@ -38,8 +48,22 @@ function lambdaSchool() {
              longestString(['JavaScript', 'HTML', 'CSS']); // returns 'JavaScript'
 */
 
-function longestString() {
+function longestString(strs) {
+  var strLength = 0;
+  var answer = "";
 
+  for (var i = 0; i < strs.length; i++){
+    // This could probably be more efficient by creating a variable here that is set to the
+    // current string in the array. This way we wouldn't have to index into the array 3 times
+    // below, just once here. But JS is a new language for me so I'm not sure about profiling
+    // it yet.
+    if (strs[i].length>strLength){
+      strLength = strs[i].length;
+      answer = strs[i];
+    }
+  }
+
+  return answer;
 }
 
 /*
@@ -63,8 +87,16 @@ function longestString() {
              computeUserAverageAge(users); // returns 62 (This number is rounded up from 61.6666)
 */
 
-function computeUserAverageAge() {
+function computeUserAverageAge(users) {
+  var answer = 0;
+  var sum = 0;
 
+  for (var i = 0; i < users.length; i++){
+    sum += users[i].age;
+  }
+
+  answer = sum / users.length;
+  return answer;
 }
 
 module.exports = {
