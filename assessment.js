@@ -26,11 +26,11 @@ function helloWorld() {
 function lambdaSchool(num) {
   var answer = num;
 
-  if (num%15=0){
+  if (num%15==0){
     answer = "Lambda School";
-  } else if (num%5=0){
+  } else if (num%5==0){
     answer = "School";
-  } else if (num%3=0){
+  } else if (num%3==0){
     answer = "Lambda";
   }
 
