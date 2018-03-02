@@ -96,6 +96,7 @@ function computeUserAverageAge(users) {
   }
 
   answer = sum / users.length;
+  // This is kind of an extra assignment, but I think it makes the return statement cleaner.
   return Math.round(answer);
 }
 
